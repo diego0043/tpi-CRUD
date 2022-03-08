@@ -5,27 +5,69 @@
 package com.mycompany.baches.control;
 
 import com.mycompany.baches.entity.resources.TipoObjeto;
-import java.io.Serializable;
-import javax.ejb.LocalBean;
-import javax.ejb.Stateless;
+import java.util.Date;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
 /**
  *
  * @author J_Die
  */
-@Stateless
-@LocalBean
-public class TipoObjetoBean implements Serializable{
-    @PersistenceContext(unitName = "Baches-PU")
-    EntityManager em;
-    
-    public boolean crear(TipoObjeto e){
-        if(e!=null && em!=null){
-            em.persist(e);
-        }
-      return false ; 
+public class TipoObjetoBean {
+
+    EntityManager em = JPA_Util.getEntityManagerFactory().createEntityManager();
+
+    public void crear(boolean estado, Date fecha) {
+        TipoObjeto tipo_objeto = new TipoObjeto();
+
+        tipo_objeto.setActivo(estado);
+        tipo_objeto.setFechaCreacion(fecha);
+
+        em.getTransaction().begin();
+        em.persist(tipo_objeto);
+        em.getTransaction().commit();
+
     }
-    
+
+    public void buscar(Integer id) {
+        TipoObjeto tipo_objeto = new TipoObjeto();
+
+        tipo_objeto = em.find(TipoObjeto.class, id);
+        if (tipo_objeto != null) {
+            System.out.println(tipo_objeto);
+        } else {
+            System.out.println("No se encontro el registro");
+        }
+    }
+
+    public void actualizar(Integer id, boolean estado, Date fecha) {
+        TipoObjeto tipo_objeto = new TipoObjeto();
+        tipo_objeto = em.find(TipoObjeto.class, id);
+
+        if (tipo_objeto != null) {
+            tipo_objeto.setActivo(estado);
+            tipo_objeto.setFechaCreacion(fecha);
+
+            em.getTransaction().begin();
+            em.persist(tipo_objeto);
+            em.getTransaction().commit();
+
+        } else {
+            System.out.println("No se encontro el registro a actualizar");
+        }
+
+    }
+
+    public void eliminar(Integer id) {
+        TipoObjeto tipo_objeto = new TipoObjeto();
+        tipo_objeto = em.find(TipoObjeto.class, id);
+
+        if (tipo_objeto != null) {
+            em.getTransaction().begin();
+            em.remove(tipo_objeto);
+            em.getTransaction().commit();
+        } else {
+            System.out.println("No se encontro el registro a elminar");
+        }
+    }
+
 }

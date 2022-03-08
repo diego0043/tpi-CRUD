@@ -39,11 +39,14 @@ public class Ruta implements Serializable {
     @Basic(optional = false)
     @Column(name = "id_ruta", nullable = false)
     private Long idRuta;
+    
     @Column(name = "nombre", length = 2147483647)
     private String nombre;
+    
     @Column(name = "fecha_creacion")
     @Temporal(TemporalType.DATE)
     private Date fechaCreacion;
+    
     @Column(name = "observaciones", length = 2147483647)
     private String observaciones;
 

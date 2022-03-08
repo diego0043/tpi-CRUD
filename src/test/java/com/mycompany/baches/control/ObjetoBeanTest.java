@@ -4,7 +4,7 @@
  */
 package com.mycompany.baches.control;
 
-import java.util.Date;
+import java.math.BigDecimal;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -12,63 +12,67 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author J_Die
  */
-public class EstadoBeanTest {
+public class ObjetoBeanTest {
     
-    public EstadoBeanTest() {
+    public ObjetoBeanTest() {
     }
 
     /**
-     * Test of crear method, of class EstadoBean.
+     * Test of crear method, of class ObjetoBean.
      */
     @Test
     public void testCrear() {
         System.out.println("crear");
+        Integer id_tipo_objeto = null;
+        BigDecimal longitud = null;
+        BigDecimal latitud = null;
         String nombre = "";
-        Date fecha = null;
-        String Observaciones = "";
-        EstadoBean instance = new EstadoBean();
-        instance.crear(nombre, fecha, Observaciones);
+        String observaciones = "";
+        ObjetoBean instance = new ObjetoBean();
+        instance.crear(id_tipo_objeto, longitud, latitud, nombre, observaciones);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of buscar method, of class EstadoBean.
+     * Test of buscar method, of class ObjetoBean.
      */
     @Test
     public void testBuscar() {
         System.out.println("buscar");
-        int id = 0;
-        EstadoBean instance = new EstadoBean();
+        Long id = null;
+        ObjetoBean instance = new ObjetoBean();
         instance.buscar(id);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of actualizar method, of class EstadoBean.
+     * Test of actualizar method, of class ObjetoBean.
      */
     @Test
     public void testActualizar() {
         System.out.println("actualizar");
-        int id = 0;
+        Long id = null;
+        Integer id_tipo_objeto = null;
+        BigDecimal longitud = null;
+        BigDecimal latitud = null;
         String nombre = "";
-        Date fecha = null;
-        String Observaciones = "";
-        EstadoBean instance = new EstadoBean();
-        instance.actualizar(id, nombre, fecha, Observaciones);
+        String observaciones = "";
+        ObjetoBean instance = new ObjetoBean();
+        instance.actualizar(id, id_tipo_objeto, longitud, latitud, nombre, observaciones);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of eliminar method, of class EstadoBean.
+     * Test of eliminar method, of class ObjetoBean.
      */
     @Test
     public void testEliminar() {
         System.out.println("eliminar");
-        int id = 0;
-        EstadoBean instance = new EstadoBean();
+        Long id = null;
+        ObjetoBean instance = new ObjetoBean();
         instance.eliminar(id);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");

@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.baches.control.ObjetoBeanTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.785 sec <<< FAILURE!
+com.mycompany.baches.control.ObjetoBeanTest.testCrear()  Time elapsed: 1.772 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: The test case is a prototype.
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:109)
+	at com.mycompany.baches.control.ObjetoBeanTest.testCrear(ObjetoBeanTest.java:34)
+
+com.mycompany.baches.control.ObjetoBeanTest.testActualizar()  Time elapsed: 0.011 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: The test case is a prototype.
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:109)
+	at com.mycompany.baches.control.ObjetoBeanTest.testActualizar(ObjetoBeanTest.java:57)
+

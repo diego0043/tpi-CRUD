@@ -39,18 +39,24 @@ public class ObjetoEstado implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
+    
     @Column(name = "id_objeto_estado", nullable = false)
     private Long idObjetoEstado;
+    
     @Column(name = "actual")
     private Boolean actual;
+    
     @Column(name = "fecha_alcanzado")
     @Temporal(TemporalType.DATE)
     private Date fechaAlcanzado;
+    
     @Column(name = "observaciones", length = 2147483647)
     private String observaciones;
+    
     @JoinColumn(name = "id_estado", referencedColumnName = "id_estado")
     @ManyToOne
     private Estado idEstado;
+    
     @JoinColumn(name = "id_objeto", referencedColumnName = "id_objeto")
     @ManyToOne
     private Objeto idObjeto;

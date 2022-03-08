@@ -1,10 +1,10 @@
 -------------------------------------------------------------------------------
-Test set: com.mycompany.baches.control.EstadoBeanTest
+Test set: com.mycompany.baches.control.RutaBeanTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.065 sec <<< FAILURE!
-com.mycompany.baches.control.EstadoBeanTest.testCrear()  Time elapsed: 2.064 sec  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.989 sec <<< FAILURE!
+com.mycompany.baches.control.RutaBeanTest.testEliminar()  Time elapsed: 1.987 sec  <<< FAILURE!
 org.opentest4j.AssertionFailedError: The test case is a prototype.
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at org.junit.jupiter.api.Assertions.fail(Assertions.java:109)
-	at com.mycompany.baches.control.EstadoBeanTest.testCrear(EstadoBeanTest.java:32)
+	at com.mycompany.baches.control.RutaBeanTest.testEliminar(RutaBeanTest.java:39)
 

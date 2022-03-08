@@ -40,6 +40,7 @@ public class TipoObjeto implements Serializable {
     @Basic(optional = false)
     @Column(name = "id_tipo_objeto", nullable = false)
     private Integer idTipoObjeto;
+    
     @Column(name = "activo")
     private Boolean activo;
     @Column(name = "fecha_creacion")

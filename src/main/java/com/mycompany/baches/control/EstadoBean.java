@@ -1,37 +1,79 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.baches.control;
 
 import com.mycompany.baches.entity.resources.Estado;
-import javax.ejb.LocalBean;
-import javax.ejb.Stateless;
+import java.util.Date;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
 
 /**
  *
  * @author J_Die
  */
-@Stateless
-@LocalBean
+
 public class EstadoBean {
+    
+    
+    EntityManager em = JPA_Util.getEntityManagerFactory().createEntityManager();
    
-    public boolean crear(Estado nuevo){
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("Baches-PU");
-        EntityManager em = emf.createEntityManager();
-        EntityTransaction tx = em.getTransaction();
-        try{
-            tx.begin();
-            em.persist(nuevo);
-            tx.commit();
-        }catch(Exception ex){
-            tx.rollback();
+    public void crear(String nombre, Date fecha, String Observaciones){
+        Estado estado = new Estado();
+        estado.setNombre(nombre);
+        estado.setFechaCreacion(fecha);
+        estado.setObservaciones(Observaciones);
+        
+        em.getTransaction().begin();
+        em.persist(estado);
+        em.getTransaction().commit();
+        
+    }
+    
+    
+    public void buscar(int id){
+            
+        Estado estado = new Estado();
+        estado = em.find(Estado.class, id);
+        
+        if (estado != null){
+            System.out.println(estado);
+            
+        }else{
+            System.out.println("El estado no se encontro");
+        }  
+    }
+    
+    public void actualizar(int id, String nombre, Date fecha, String Observaciones){
+        
+        Estado estado = new Estado();
+        estado = em.find(Estado.class, id);
+        if(estado != null){
+            
+            estado.setNombre(nombre);
+            estado.setFechaCreacion(fecha);
+            estado.setObservaciones(Observaciones);
+            
+            em.getTransaction().begin();
+            em.merge(estado);
+            em.getTransaction().commit();
+            
+        }else{
+            System.out.println("El estado no se encontro para actualizar");
         }
-      return false ; 
+        
+    }
+    
+    
+    public void eliminar(int id){
+        
+        Estado estado = new Estado();
+        estado = em.find(Estado.class, id);
+        
+        if(estado != null){
+            em.getTransaction().begin();
+            em.remove(estado);
+            em.getTransaction().commit();
+        }else{
+            System.out.println("El estado no se encontro para eliminarlo");
+        }
+        
     }
     
 }

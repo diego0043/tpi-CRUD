@@ -12,63 +12,63 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author J_Die
  */
-public class EstadoBeanTest {
+public class RutaBeanTest {
     
-    public EstadoBeanTest() {
+    public RutaBeanTest() {
     }
 
     /**
-     * Test of crear method, of class EstadoBean.
+     * Test of crear method, of class RutaBean.
      */
     @Test
     public void testCrear() {
         System.out.println("crear");
         String nombre = "";
         Date fecha = null;
-        String Observaciones = "";
-        EstadoBean instance = new EstadoBean();
-        instance.crear(nombre, fecha, Observaciones);
+        String observaciones = "";
+        RutaBean instance = new RutaBean();
+        instance.crear(nombre, fecha, observaciones);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of buscar method, of class EstadoBean.
+     * Test of buscar method, of class RutaBean.
      */
     @Test
     public void testBuscar() {
         System.out.println("buscar");
-        int id = 0;
-        EstadoBean instance = new EstadoBean();
+        Long id = null;
+        RutaBean instance = new RutaBean();
         instance.buscar(id);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of actualizar method, of class EstadoBean.
+     * Test of actualizar method, of class RutaBean.
      */
     @Test
     public void testActualizar() {
         System.out.println("actualizar");
-        int id = 0;
+        Long id = null;
         String nombre = "";
         Date fecha = null;
-        String Observaciones = "";
-        EstadoBean instance = new EstadoBean();
-        instance.actualizar(id, nombre, fecha, Observaciones);
+        String observaciones = "";
+        RutaBean instance = new RutaBean();
+        instance.actualizar(id, nombre, fecha, observaciones);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of eliminar method, of class EstadoBean.
+     * Test of eliminar method, of class RutaBean.
      */
     @Test
     public void testEliminar() {
         System.out.println("eliminar");
-        int id = 0;
-        EstadoBean instance = new EstadoBean();
+        Long id = null;
+        RutaBean instance = new RutaBean();
         instance.eliminar(id);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");

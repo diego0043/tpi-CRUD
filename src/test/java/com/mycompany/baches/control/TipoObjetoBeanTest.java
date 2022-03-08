@@ -12,63 +12,61 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author J_Die
  */
-public class EstadoBeanTest {
+public class TipoObjetoBeanTest {
     
-    public EstadoBeanTest() {
+    public TipoObjetoBeanTest() {
     }
 
     /**
-     * Test of crear method, of class EstadoBean.
+     * Test of crear method, of class TipoObjetoBean.
      */
     @Test
     public void testCrear() {
         System.out.println("crear");
-        String nombre = "";
+        boolean estado = false;
         Date fecha = null;
-        String Observaciones = "";
-        EstadoBean instance = new EstadoBean();
-        instance.crear(nombre, fecha, Observaciones);
+        TipoObjetoBean instance = new TipoObjetoBean();
+        instance.crear(estado, fecha);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of buscar method, of class EstadoBean.
+     * Test of buscar method, of class TipoObjetoBean.
      */
     @Test
     public void testBuscar() {
         System.out.println("buscar");
-        int id = 0;
-        EstadoBean instance = new EstadoBean();
+        Integer id = null;
+        TipoObjetoBean instance = new TipoObjetoBean();
         instance.buscar(id);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of actualizar method, of class EstadoBean.
+     * Test of actualizar method, of class TipoObjetoBean.
      */
     @Test
     public void testActualizar() {
         System.out.println("actualizar");
-        int id = 0;
-        String nombre = "";
+        Integer id = null;
+        boolean estado = false;
         Date fecha = null;
-        String Observaciones = "";
-        EstadoBean instance = new EstadoBean();
-        instance.actualizar(id, nombre, fecha, Observaciones);
+        TipoObjetoBean instance = new TipoObjetoBean();
+        instance.actualizar(id, estado, fecha);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of eliminar method, of class EstadoBean.
+     * Test of eliminar method, of class TipoObjetoBean.
      */
     @Test
     public void testEliminar() {
         System.out.println("eliminar");
-        int id = 0;
-        EstadoBean instance = new EstadoBean();
+        Integer id = null;
+        TipoObjetoBean instance = new TipoObjetoBean();
         instance.eliminar(id);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
